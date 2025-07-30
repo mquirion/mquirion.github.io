@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Code on Matt Quirion</title>
+    <link>https://mquirion.github.io/categories/code/</link>
+    <description>Recent content in Code on Matt Quirion</description>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mquirion.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rotting Gangnam Style</title>
+      <link>https://mquirion.github.io/posts/output/posts/2021-07-22-rotting-gangnam-style/</link>
+      <pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>https://mquirion.github.io/posts/output/posts/2021-07-22-rotting-gangnam-style/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://world.hey.com/joaoqalves/disasters-i-ve-seen-in-a-microservices-world-a9137a51&#34;&gt;This piece&lt;/a&gt; has been making the rounds among tech heads this week, and there&amp;rsquo;s one key point made by the author that I wish I could make to every stakeholder in every organization on the planet at once rather than having to explain it here and there as I encounter them personally.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The problem with code, in general, is that it rots.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;There is no shortage of perfect code in the world. Perfect code is written every day. Probably every serious software developer has written perfect code several times in their career. The problem is that perfect code is temporary. Time ticks away quickly, and the perfection of the code decays. Perfect code is not impervious code.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

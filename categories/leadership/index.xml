@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Leadership on Matt Quirion</title>
+    <link>https://mquirion.github.io/categories/leadership/</link>
+    <description>Recent content in Leadership on Matt Quirion</description>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mquirion.github.io/categories/leadership/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>It&#39;s Better To Be Liked</title>
+      <link>https://mquirion.github.io/posts/output/posts/2021-08-01-its-better-to-be-liked/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://mquirion.github.io/posts/output/posts/2021-08-01-its-better-to-be-liked/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;hellip;it is much safer to be feared than loved because &amp;hellip;love is preserved by the link of obligation which, owing to the baseness of men, is broken at every opportunity for their advantage; but fear preserves you by a dread of punishment which never fails.&lt;/p&gt;
+&lt;p&gt;Niccolo Machiavelli (Author of &lt;em&gt;The Prince&lt;/em&gt; and probably a terrible manager of people)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I&amp;rsquo;m unaware of Niccolo Machiavelli ever trying to lead a team while building a software product, but I&amp;rsquo;m guessing if he ever tried, he was terrible. Fear breeds loathing, and if you&amp;rsquo;re loathed, you are not liked. Software engineering teams don&amp;rsquo;t need to love one another and their leaders, but they absolutely have to like them. And as a leader of a software engineering organization, it&amp;rsquo;s not just unpleasant for your team to fear you or dislike you. Fear and loathing in software engineering generates a massive productivity opportunity cost.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Cloud Legos, Not Cloud Jack-of-all-Trades-in-the-Box | Matt Quirion</title>
+<meta name="keywords" content="">
+<meta name="description" content="This week Corey Quinn wrote about what the &ldquo;next million cloud customers&rdquo; will need from Amazon. In the post, he warns Amazon that if they don&rsquo;t provide a higher level abstraction of all of their cloud services, essentially pre-architecting industry vertical appropriate cloud architectures that will help get the many yet-to-covert companies onto the cloud, then someone will eventually show up and meet this market opportunity, eventually relegating AWS to the domain of NTT and CenturyLink; vital, yet unknown. It&rsquo;s a compelling argument. But what if AWS doesn&rsquo;t build this abstraction, and what if nobody else does either?">
+<meta name="author" content="">
+<link rel="canonical" href="https://mquirion.github.io/posts/output/posts/2021-10-01-cloud-legos-not-cloud-jack-of-all-trades-in-the-box/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://mquirion.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mquirion.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mquirion.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://mquirion.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://mquirion.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://mquirion.github.io/posts/output/posts/2021-10-01-cloud-legos-not-cloud-jack-of-all-trades-in-the-box/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script defer src="https://cloud.umami.is/script.js" data-website-id="8b37a18c-d77d-4800-bae5-8cc7a4156daa"></script><meta property="og:url" content="https://mquirion.github.io/posts/output/posts/2021-10-01-cloud-legos-not-cloud-jack-of-all-trades-in-the-box/">
+  <meta property="og:site_name" content="Matt Quirion">
+  <meta property="og:title" content="Cloud Legos, Not Cloud Jack-of-all-Trades-in-the-Box">
+  <meta property="og:description" content="This week Corey Quinn wrote about what the “next million cloud customers” will need from Amazon. In the post, he warns Amazon that if they don’t provide a higher level abstraction of all of their cloud services, essentially pre-architecting industry vertical appropriate cloud architectures that will help get the many yet-to-covert companies onto the cloud, then someone will eventually show up and meet this market opportunity, eventually relegating AWS to the domain of NTT and CenturyLink; vital, yet unknown. It’s a compelling argument. But what if AWS doesn’t build this abstraction, and what if nobody else does either?">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-10-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-10-01T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cloud Legos, Not Cloud Jack-of-all-Trades-in-the-Box">
+<meta name="twitter:description" content="This week Corey Quinn wrote about what the &ldquo;next million cloud customers&rdquo; will need from Amazon. In the post, he warns Amazon that if they don&rsquo;t provide a higher level abstraction of all of their cloud services, essentially pre-architecting industry vertical appropriate cloud architectures that will help get the many yet-to-covert companies onto the cloud, then someone will eventually show up and meet this market opportunity, eventually relegating AWS to the domain of NTT and CenturyLink; vital, yet unknown. It&rsquo;s a compelling argument. But what if AWS doesn&rsquo;t build this abstraction, and what if nobody else does either?">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://mquirion.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Cloud Legos, Not Cloud Jack-of-all-Trades-in-the-Box",
+      "item": "https://mquirion.github.io/posts/output/posts/2021-10-01-cloud-legos-not-cloud-jack-of-all-trades-in-the-box/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cloud Legos, Not Cloud Jack-of-all-Trades-in-the-Box",
+  "name": "Cloud Legos, Not Cloud Jack-of-all-Trades-in-the-Box",
+  "description": "This week Corey Quinn wrote about what the \u0026ldquo;next million cloud customers\u0026rdquo; will need from Amazon. In the post, he warns Amazon that if they don\u0026rsquo;t provide a higher level abstraction of all of their cloud services, essentially pre-architecting industry vertical appropriate cloud architectures that will help get the many yet-to-covert companies onto the cloud, then someone will eventually show up and meet this market opportunity, eventually relegating AWS to the domain of NTT and CenturyLink; vital, yet unknown. It\u0026rsquo;s a compelling argument. But what if AWS doesn\u0026rsquo;t build this abstraction, and what if nobody else does either?\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "This week Corey Quinn wrote about what the “next million cloud customers” will need from Amazon. In the post, he warns Amazon that if they don’t provide a higher level abstraction of all of their cloud services, essentially pre-architecting industry vertical appropriate cloud architectures that will help get the many yet-to-covert companies onto the cloud, then someone will eventually show up and meet this market opportunity, eventually relegating AWS to the domain of NTT and CenturyLink; vital, yet unknown. It’s a compelling argument. But what if AWS doesn’t build this abstraction, and what if nobody else does either?\nIn 2003, while helping my CTO decide between buy vs build for a CRM to service our VOIP-startup, I experienced my first real appreciation for just how difficult it is to create a service you can sell broadly to many enterprises to fit their needs. Nothing among the ocean of CRMs we could find matched our VOIP-startup needs in a way that wouldn’t create so many new headaches for us as to be worth the cost or implementation. We ended up building a solution ourselves. The CRM we needed had to fit our particular way of doing business. And our particular way of doing business was our secret sauce - our differentiator.\nIn 2006, I helped rescue a massive project to modernize a major insurance company’s quoting software from COBOL and mainframes to Java and the Web. Many of the problems they’d run into during the move were the result of one assumption: That the way this massive insurance company did business was somehow separate from the encoding of their processes and policies within that old COBOL code. The result: 100s if not 1000s of bugs where the web-based Java software ran exactly as designed, but not in a way that the company needed it to run. And it’s not like the architects were idiots. Things just got lost in translation. Ultimately, that company had to change the code and itself in order to make it all work together.\nIn the 2010s, Marc Andreesen pointed out that “software is eating the world.” SaaS finally had an acronym people recognized and understood. And ever since, 100s of disruptive new companies have sprung forth, eating the worlds of many older enterprises who can’t just start anew. There are at least 534 billion dollar “technology” companies. In today’s parlance, a “technology company” is often any company that realized you could do something established companies had done for a long time, but with a lot of software to do it, and find margins the established companies could not. You either are a SaaS, or you’ll be eaten by one.\nCorey suggests that AWS could possibly understand verticals in which they do not operate at all well enough to pre-architect these cloud implementations. I’m skeptical, even if it is Amazon. No non-trivial business software today is able to execute at a generalized enough level to be applicable to a broad enough market that it would move the needle for a trillion dollar business. And no software that was so broadly attractive to a large enough market would function specifically well enough to meet any one customer’s real needs. Adoption of cloud abstractions overly generalized by industry non-experts would be corporate suicide.\nI actually like Corey’s idea. It’s a multi-trillion dollar idea if you can do it right. Which means that there’s an opportunity to become one of many, many multi-billion dollar companies if you can do some piece of it right. And that’s what I think will happen. Hell, that may actually be what Corey meant all along. If nobody shows up to build the uber-abstraction-layer for all things cloud for all industries, then we’ll get dozens if not 100s of industry-specific, cloud-category specializing players.\nA market may well demand a singular uber-abstraction, but there’s such a thing as unmet demand. One of my favorite econ profs in college would jokingly call that an “unyet supply.” (Always love a dad-joke.) And in that vacuum of unmet demand we can build an ecosystem of integrable abstractions. But the enterprises still waiting on the sidelines will need to identify and utilize these abstractions quickly, because the domain of benefits will not only belong to them. 100s of other startups will be able to benefit too.\nSo… a funny thing happened:\nI started writing this post on Wednesday of this week, and as I usually do, slept on it to see if I still agreed with myself the next day. And wouldn’t you know it, something did happen: Smart minds, including Cory’s, got their heads around Cloudflare’s new R2 product.\nHere’s smart-minded Ben Thompson to explain part of what this means:\nThat is one way this could play out: R2 is a compelling choice for a certain class of applications that could be built to serve a lot of data without much compute. Moreover, by virtue of using the S3 API, R2 can also be dropped into existing projects; developers can place R2 in front of S3, pulling out data as needed, once, and getting free egress forever-after.\nSo R2 proves Cory right, but in a funny way. Someone is showing up to take advantage of AWS’s margins, and provide a kind of modular replacement of S3 by supplying a compatible front-end that enables developers to build much lower cost interop between cloud service providers. Do you have any idea how many times in the last several years I wished I could affordably move a ton of data across CSPs without incurring huge costs so I could take advantage of the relative strengths of each? Anyone want to write a quick ETL that takes advantage of Route 53, Lambda, S3, and Google BigQuery? Now you might be able to without upsetting your CFO.\nBut this is still not quite what Cory had in mind, at least in his stated thesis. This is no abstraction. Indeed, R2’s API is a copy of S3’s API. You still have to have a good bit of actual knowledge - now about 2 cloud providers! - to get lower cost multi-cloud interop working together in a way that suits you. But it’s still a major step forward for those of us with the know-how. And maybe it’s a small step forward to a future of companies that can provide industry-specific abstractions that cross clouds.\n",
+  "wordCount" : "1059",
+  "inLanguage": "en",
+  "datePublished": "2021-10-01T00:00:00Z",
+  "dateModified": "2021-10-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mquirion.github.io/posts/output/posts/2021-10-01-cloud-legos-not-cloud-jack-of-all-trades-in-the-box/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Matt Quirion",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mquirion.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://mquirion.github.io/" accesskey="h" title="Matt Quirion (Alt + H)">Matt Quirion</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://mquirion.github.io/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://mquirion.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://mquirion.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Cloud Legos, Not Cloud Jack-of-all-Trades-in-the-Box
+    </h1>
+    <div class="post-meta"><span title='2021-10-01 00:00:00 +0000 UTC'>October 1, 2021</span>&nbsp;·&nbsp;5 min
+
+</div>
+  </header> 
+  <div class="post-content"><p>This week Corey Quinn wrote about what the &ldquo;<a href="https://www.lastweekinaws.com/blog/the-actual-next-million-cloud-customers/?ck_subscriber_id=1442107382">next million cloud customers</a>&rdquo; will need from Amazon. In the post, he warns Amazon that if they don&rsquo;t provide a higher level abstraction of all of their cloud services, essentially pre-architecting industry vertical appropriate cloud architectures that will help get the many yet-to-covert companies onto the cloud, then someone will eventually show up and meet this market opportunity, eventually relegating AWS to the domain of NTT and CenturyLink; vital, yet unknown. It&rsquo;s a compelling argument. But what if AWS doesn&rsquo;t build this abstraction, and what if nobody else does either?</p>
+<p>In 2003, while helping my CTO decide between buy vs build for a CRM to service our VOIP-startup, I experienced my first real appreciation for just how difficult it is to create a service you can sell broadly to many enterprises to fit their needs. Nothing among the ocean of CRMs we could find matched our VOIP-startup needs in a way that wouldn&rsquo;t create so many new headaches for us as to be worth the cost or implementation. We ended up building a solution ourselves. The CRM we needed had to fit our particular way of doing business. And our particular way of doing business was our secret sauce - our differentiator.</p>
+<p>In 2006, I helped rescue a massive project to modernize a major insurance company&rsquo;s quoting software from COBOL and mainframes to Java and the Web. Many of the problems they&rsquo;d run into during the move were the result of one assumption: That the way this massive insurance company did business was somehow separate from the encoding of their processes and policies within that old COBOL code. The result: 100s if not 1000s of bugs where the web-based Java software ran exactly as designed, but not in a way that the company needed it to run. And it&rsquo;s not like the architects were idiots. Things just got lost in translation. Ultimately, that company had to change the code and itself in order to make it all work together.</p>
+<p>In the 2010s, Marc Andreesen pointed out that &ldquo;software is eating the world.&rdquo; SaaS finally had an acronym people recognized and understood. And ever since, 100s of disruptive new companies have sprung forth, eating the worlds of many older enterprises who can&rsquo;t just start anew. There are <a href="https://en.wikipedia.org/wiki/List_of_unicorn_startup_companies">at least 534</a> billion dollar &ldquo;technology&rdquo; companies. In today&rsquo;s parlance, a &ldquo;technology company&rdquo; is often any company that realized you could do something established companies had done for a long time, but with a lot of software to do it, and find margins the established companies could not. You either are a SaaS, or you&rsquo;ll be eaten by one.</p>
+<p>Corey suggests that AWS could possibly understand verticals in which they do not operate at all well enough to pre-architect these cloud implementations. I&rsquo;m skeptical, even if it is Amazon. No non-trivial business software today is able to execute at a generalized enough level to be applicable to a broad enough market that it would move the needle for a trillion dollar business. And no software that was so broadly attractive to a large enough market would function specifically well enough to meet any one customer&rsquo;s real needs. Adoption of cloud abstractions overly generalized by industry non-experts would be corporate suicide.</p>
+<p>I actually like Corey&rsquo;s idea. It&rsquo;s a multi-trillion dollar idea if you can do it right. Which means that there&rsquo;s an opportunity to become one of many, many multi-billion dollar companies if you can do some piece of it right. And that&rsquo;s what I think will happen. Hell, that may actually be what Corey meant all along. If nobody shows up to build the uber-abstraction-layer for all things cloud for all industries, then we&rsquo;ll get dozens if not 100s of industry-specific, cloud-category specializing players.</p>
+<p>A market may well demand a singular uber-abstraction, but there&rsquo;s such a thing as unmet demand. One of my favorite econ profs in college would jokingly call that an &ldquo;unyet supply.&rdquo; (Always love a dad-joke.) And in that vacuum of unmet demand we can build an ecosystem of integrable abstractions. But the enterprises still waiting on the sidelines will need to identify and utilize these abstractions quickly, because the domain of benefits will not only belong to them. 100s of other startups will be able to benefit too.</p>
+<p><strong>So&hellip; a funny thing happened:</strong></p>
+<p>I started writing this post on Wednesday of this week, and as I usually do, slept on it to see if I still agreed with myself the next day. And wouldn&rsquo;t you know it, something did happen: Smart minds, including Cory&rsquo;s, got their heads around <a href="https://blog.cloudflare.com/introducing-r2-object-storage/">Cloudflare&rsquo;s new R2 product</a>.</p>
+<p>Here&rsquo;s smart-minded <a href="https://stratechery.com/2021/cloudflares-disruption/">Ben Thompson to explain part of what this means</a>:</p>
+<blockquote>
+<p>That is one way this could play out: R2 is a compelling choice for a certain class of applications that could be built to serve a lot of data without much compute. Moreover, by virtue of using the S3 API, R2 can also be dropped into existing projects; developers can place R2 in front of S3, pulling out data as needed, once, and getting free egress forever-after.</p></blockquote>
+<p>So R2 proves Cory right, but in a funny way. Someone is showing up to take advantage of AWS&rsquo;s margins, and provide a kind of modular replacement of S3 by supplying a compatible front-end that enables developers to build much lower cost interop between cloud service providers. Do you have any idea how many times in the last several years I wished I could affordably move a ton of data across CSPs without incurring huge costs so I could take advantage of the relative strengths of each? Anyone want to write a quick ETL that takes advantage of Route 53, Lambda, S3, and Google BigQuery? Now you might be able to without upsetting your CFO.</p>
+<p>But this is still not quite what Cory had in mind, at least in his stated thesis. This is no abstraction. Indeed, R2&rsquo;s API is a copy of S3&rsquo;s API. You still have to have a good bit of actual knowledge - now about 2 cloud providers! - to get lower cost multi-cloud interop working together in a way that suits you. But it&rsquo;s still a major step forward for those of us with the know-how. And maybe it&rsquo;s a small step forward to a future of companies that can provide industry-specific abstractions that cross clouds.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://mquirion.github.io/posts/output/posts/2023-06-01-something-different/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Something Different</span>
+  </a>
+  <a class="next" href="https://mquirion.github.io/posts/output/posts/2021-08-01-its-better-to-be-liked/">
+    <span class="title">Next »</span>
+    <br>
+    <span>It&#39;s Better To Be Liked</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://mquirion.github.io/">Matt Quirion</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
